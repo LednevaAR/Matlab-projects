@@ -1,0 +1,6 @@
+function Tx_OFDM_Signal = signal_generator(Tx_OFDM_symbols, T_guard)
+
+Tx_OFDM_Signal(T_Guard + 1 : end, 1 : end) = Tx_OFDM_symbols;
+Tx_OFDM_Signal 
+end
+

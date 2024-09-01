@@ -1,0 +1,17 @@
+function Rx_OFDM_symbols = OFDM_Signal_Demod(Rx_OFDM_Signal, T_guard)
+    i = 1;
+    k = 1;
+    p = 0;
+
+    while (i < numel(Rx_OFDM_Signal) - T_guard)
+        if (Rx_OFDM_Signal(i : i + T_guard - 1) == zeros(1, T_guard))
+            if (p ~= 0) 
+                Rx_OFDM_symbols(k) = Rx_OFDM_Signal(p : i - 1);
+            end
+            k = k + 1;
+            p = i + T_guard;
+        end
+    end
+    Rx_OFDM_symbols(k) = Rx_OFDM_Signal(p : end);
+    %другой способ - через N_fft
+end
