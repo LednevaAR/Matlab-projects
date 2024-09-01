@@ -1,0 +1,12 @@
+function Dict = name(Constellation)
+    switch Constellation
+        case "BPSK"
+            Dict = ["0", "1"];
+        case "QPSK"
+            Dict = ["00", "01", "10", "11"];
+        case "8PSK"
+            Dict = ["000", "001", "010", "011", "100", "101", "110", "111"];
+        case "16-QAM"
+            Dict = ["0000", "0000",];
+    end
+end

@@ -1,0 +1,4 @@
+function H = joint_entropy1(X, Y)
+    H = string(X + Y);
+end
+

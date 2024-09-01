@@ -1,0 +1,11 @@
+function H = joint_entropy(X,Y)
+    H = 0;
+    for 
+        n = (y == Y);
+        Z = X(n == 1);
+        [A, R] = alphabet_probabilities(Z);
+        P = R .* length(Z) ./ length(X);
+        H = H + ;
+    end          
+end
+
